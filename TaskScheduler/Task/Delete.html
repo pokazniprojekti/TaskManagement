@@ -1,0 +1,50 @@
+﻿<h3>Are you sure you want to delete this record?</h3>
+<hr />
+<form class="form-horizontal" style="max-width: 500px;">
+    <div class="form-group">
+        <label class="control-label col-xs-3">
+            Task Name :
+        </label>
+        <div class="col-xs-9">
+            <p class="form-control-static">
+                {{ TaskName }}
+            </p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">
+            Description :
+        </label>
+        <div class="col-xs-9">
+            <p class="form-control-static">
+                {{ Description }}
+            </p>
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <label class="control-label col-xs-3">
+            Visibility :
+        </label>
+        <div class="col-xs-9">
+            <p class="form-control-static">
+                {{ Visibility }}
+            </p>
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-9">
+            <span class="label" id="sp" ng-class="{Active:'label-success', Finished:'label-danger', '':'hidden'}[IsActive]">{{ IsActive=="Active" ? 'Active' : 'Finished' }}</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-9 text-center">
+            <a href="/Home/AddTask#!/list" class="btn btn-info">Back to List</a>
+            <button type="submit" class="btn btn-primary" ng-click="delete()">
+                Delete
+            </button>
+        </div>
+    </div>
+</form>

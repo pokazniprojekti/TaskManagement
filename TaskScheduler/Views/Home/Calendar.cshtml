@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Calendar";
+}
+
+
+
+<div ng-controller="CalendarController">
+    <div class="row cal">
+        <div class="col-md-8 in">
+            <!--Calendar display element-->
+            <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar"></div>
+        </div>
+    </div>
+</div>

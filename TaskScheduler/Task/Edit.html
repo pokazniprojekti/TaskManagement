@@ -1,0 +1,75 @@
+﻿<h3>{{ title }}</h3>
+<hr />
+<form role="form" style="max-width: 500px;">
+    <strong class="error">{{ error }}</strong>
+    <div class="form-group">
+        <label for="TaskName">
+            Task Name:
+        </label>
+        <input type="text" class="form-control" id="TaskName" ng-model="TaskName" />
+    </div>
+    
+
+
+    <div class="form-group">
+        <label for="Assign">
+            Assign:
+        </label>
+        <select class="form-control" id="Assign" ng-model="Assign" ng-options="c.Value as c.Text for c in employees">
+            <option value="">-- Select Employee --</option>
+        </select>
+    </div>
+    
+
+    <div class="form-group">
+        <label for="StartDate">
+            Start Date:
+        </label>
+        <input type="date" class="form-control" id="StartDate" ng-model="StartDate" />
+    </div>
+
+
+    <div class="form-group">
+        <label for="EndDate">
+            End Date:
+        </label>
+        <input type="date" class="form-control" id="EndDate" ng-model="EndDate" />
+    </div>
+
+
+
+    <div class="form-group">
+        <label for="Visibility">
+            Visibility:
+        </label>
+        <select class="form-control" id="Visibility" ng-model="Visibility" ng-options="c.Value as c.Text for c in visible">
+            <option value="">-- Visibility --</option>
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="Assign">
+            IsActive:
+        </label>
+        <select class="form-control" id="IsActive" ng-model="IsActive" ng-options="c.Value as c.Text for c in activestate">
+            <option value="">-- Select Activity --</option>
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="Description">
+            Description
+        </label>
+        <textarea rows="5" cols="10" class="form-control" id="Description" ng-model="Description"></textarea>
+    </div>
+
+
+
+
+    <a href="/Home/AddTask#!/list" class="btn btn-info">Back to List</a>
+    <button type="submit" class="btn btn-default" ng-click="save()">
+        Submit
+    </button>
+</form>
